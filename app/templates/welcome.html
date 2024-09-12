@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Приветствующая страница{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6 text-center">
+        <h2>Приветствую тебя, {{ current_user.username }}!</h2>
+        <p>Добро пожаловать на страницу вашего профиля. Вы можете обновить свою личную информацию ниже</p>
+        <a href="{{ url_for('main.profile') }}" class="btn btn-primary">Обновить профиль</a>
+    </div>
+</div>
+{% endblock %}
